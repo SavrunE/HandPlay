@@ -1,0 +1,25 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace WTF
+{
+    public abstract class SpawnData : ScriptableObject
+    {
+        public string Name;
+        public string Description;
+
+        public Sprite Sprite;
+
+        public float MoveSpeed;
+        public Vector2 DirectionMove;
+        public virtual float Damage()
+        {
+            return 0;
+        }
+        public virtual int Coins()
+        {
+            return 0;
+        }
+    }
+}
